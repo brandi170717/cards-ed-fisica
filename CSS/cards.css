@@ -1,0 +1,39 @@
+.card{
+    width: 200px;
+    margin: 50px;
+    perspective: 1000px;
+}
+
+.face{
+    width: 200px;
+    height: 300px;
+    transition: 0.7s;
+    transform-style: preserve-3d;
+}
+
+.card.is-flipped .face{
+    transform: rotateY(-180deg);
+}
+.front, .back{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    backface-visibility: hidden;
+    border: 7px solid rgba(149, 6, 6, 0.973);
+    margin: 30px;
+    border-radius: 15px;
+}
+
+.front{
+    background-color: rgb(245, 242, 242);
+    transform: rotateY(0);
+    cursor: pointer;
+}
+
+.back{
+    background-color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    cursor: pointer;
+    align-content: center;
+}
